@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        margin: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        background-color: blue;
+        color: white;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+</style>
+
+<body>
+    <div class="main_container">
+        <div class="image">
+            <img src="" alt="" />
+        </div>
+        <div class="personal_details">
+            <h2>Personal Details</h2>
+            <div class="grid">
+                {% for data in patient_data %}
+                <div class="rowtype">Name</div>
+                <div class="rowvalue">{{data[1]}}</div>
+                <div class="rowtype">Address</div>
+                <div class="rowvalue">
+                    {{data[2]}}
+                </div>
+                <div class="rowtype">pin</div>
+                <div class="rowvalue">{{data[3]}}</div>
+                <div class="rowtype">Date of birth</div>
+                <div class="rowvalue">{{data[4]}}</div>
+                <div class="rowtype">Blood group</div>
+                <div class="rowvalue">{{data[5]}}</div>
+                <div class="rowtype">Contact number</div>
+                <div class="rowvalue">{{data[6]}}</div>
+                <div class="rowtype">Emergency</div>
+
+                <div class="rowvalue">{{data[7]}}</div>
+                <div class="rowtype">Email</div>
+                <div class="rowvalue">{{data[8]}}</div>
+                {% endfor %}
+                <div class="rowtype">
+                    <a href="{{ url_for ('ViewQR',id=id)  }}">View QRCode</a>
+                    {{id}}
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Health issue</th>
+                    <th>Doctor Name</th>
+                    <th>Medicine</th>
+                    <th>Doctor number</th>
+                </tr>
+                <tr>
+                    <td>Sugar</td>
+                    <td>Vishnu</td>
+                    <td>Med 1</td>
+                    <td>8656434325</td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure</td>
+                    <td>RV Iyyer</td>
+                    <td>Med 2</td>
+                    <td>9678543489</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

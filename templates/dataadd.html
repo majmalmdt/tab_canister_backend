@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data</title>
+</head>
+<style>
+    .main_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    
+    input {
+        height: 40px;
+        width: 300px;
+        padding-left: 10px;
+    }
+    
+    textarea {
+        width: 310px;
+    }
+    
+    button {
+        width: 314px;
+        height: 40px;
+        margin-top: 1rem;
+        background-color: rgb(3, 190, 91);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        outline: none;
+    }
+    
+    body {
+        background-color: rgb(50, 241, 133);
+    }
+</style>
+
+<body>
+    <div class="main_container">
+        <h2>Details Add</h2>
+        <form action="" method="post">
+            <div class="type">Name</div>
+            <div class="value"><input type="text" name="Name" id="" required/></div>
+            <div class="type">Address</div>
+            <div class="value">
+                <textarea name="Address" id="" cols="30" rows="10"required></textarea>
+            </div>
+            <div class="type">pin</div>
+            <div class="value">
+                <input type="text" name="Pin" id="" required/>
+            </div>
+            <div class="type">Date of birth</div>
+            <div class="value">
+                <input type="date" name="DOB" id="" required/>
+            </div>
+            <div class="type">Blood group</div>
+            <div class="value">
+                <input type="text" name="BloodGroup" id="" required/>
+            </div>
+            <div class="type">Contact</div>
+            <div class="value">
+                <input type="text" name="ContactNumber" id="" required/>
+            </div>
+            <div class="type">Emergency</div>
+            <div class="value">
+                <input type="text" name="EmergencyContactNumber" id=""required />
+            </div>
+            <div class="type">Email</div>
+            <div class="value">
+                <input type="text" name="Email" id="" required/>
+            </div>
+            <div class="type">Password</div>
+            <div class="value">
+                <input type="password" name="password" id="" required/>
+            </div>
+            <button type="submit">Add Details</button>
+        </form>
+    </div>
+</body>
+
+</html>
